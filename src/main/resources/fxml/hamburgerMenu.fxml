@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="720.0" maxWidth="-Infinity" minHeight="720.0" minWidth="-Infinity" prefHeight="720.0" prefWidth="353.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="201.0" fitWidth="353.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../backdrop.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton prefHeight="88.0" prefWidth="353.0" ripplerFill="#ff0909" style="-fx-background-color: #c62828;">
+         <font>
+            <Font name="Consolas" size="48.0" />
+         </font>
+      </JFXButton>
+      <JFXButton prefHeight="88.0" prefWidth="353.0" ripplerFill="#ff0909" style="-fx-background-color: #c62828;">
+         <font>
+            <Font name="Consolas" size="48.0" />
+         </font>
+      </JFXButton>
+      <JFXButton prefHeight="88.0" prefWidth="353.0" ripplerFill="#ff0909" style="-fx-background-color: #c62828;">
+         <font>
+            <Font name="Consolas" size="48.0" />
+         </font>
+      </JFXButton>
+      <JFXButton prefHeight="88.0" prefWidth="353.0" ripplerFill="#ff0909" style="-fx-background-color: #c62828;">
+         <font>
+            <Font name="Consolas" size="48.0" />
+         </font>
+      </JFXButton>
+   </children>
+</VBox>

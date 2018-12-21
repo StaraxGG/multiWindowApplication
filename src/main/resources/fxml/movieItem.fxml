@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="1400.0" maxWidth="1280.0" minHeight="272.0" minWidth="181.0" prefHeight="429.0" prefWidth="206.0" style="-fx-background-color: #081c24;" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="title" layoutX="4.0" layoutY="309.0" prefHeight="58.0" prefWidth="199.0" text="Movie Title which is reall long and exhausting" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Leelawadee UI" size="17.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="poster" fitHeight="313.0" fitWidth="206.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../poster.jpg" />
+         </image></ImageView>
+   </children>
+</fx:root>
