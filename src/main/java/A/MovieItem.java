@@ -60,13 +60,16 @@ public class MovieItem extends AnchorPane implements Initializable {
         this.describtion = describtion;
         this.fullTitle = fullTitle;
         this.movieDb = movieDb;
+
+        poster.setImage(new Image(this.posterURL));
+        title.setText(fullTitle);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        Image img = new Image("https://image.tmdb.org/t/p/w300/dCtFvscYcXQKTNvyyaQr2g2UacJ.jpg");
-        GuiToolBox.getRoundCorners(poster,img,true);
+        //Image img = new Image("https://image.tmdb.org/t/p/w300/dCtFvscYcXQKTNvyyaQr2g2UacJ.jpg");
+        //GuiToolBox.getRoundCorners(poster,img,true);
 
     }
 

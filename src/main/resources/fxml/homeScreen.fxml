@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="720.0" maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="A.HomeScreen">
+<VBox maxHeight="720.0" maxWidth="1409.0" minHeight="720.0" minWidth="776.0" prefHeight="720.0" prefWidth="1255.0" style="-fx-background-color: #081c24;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="A.HomeScreen">
    <children>
-      <AnchorPane maxHeight="60.0" maxWidth="1280.0" minHeight="60.0" minWidth="1280.0" prefHeight="60.0" prefWidth="1280.0" style="-fx-background-color: #c62828;">
+      <AnchorPane maxHeight="60.0" maxWidth="1280.0" minHeight="60.0" minWidth="1258.0" prefHeight="60.0" prefWidth="1258.0" style="-fx-background-color: #c62828;">
          <children>
             <JFXHamburger layoutX="14.0" layoutY="20.0" />
             <ImageView fx:id="logo" fitHeight="60.0" fitWidth="400.0" layoutX="440.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXButton fx:id="switchButton" layoutX="177.0" layoutY="18.0" onAction="#goToMovie" />
          </children>
       </AnchorPane>
-      <TilePane fx:id="tilePane" maxHeight="660.0" maxWidth="1280.0" minHeight="660.0" minWidth="1280.0" prefHeight="660.0" prefWidth="1280.0" style="-fx-background-color: #212121;" />
+      <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="708.0" maxWidth="1441.0" minHeight="177.0" minWidth="585.0" prefHeight="660.0" prefWidth="1258.0" style="-fx-background-color: #081c24;" />
    </children>
 </VBox>

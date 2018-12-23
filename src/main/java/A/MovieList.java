@@ -49,6 +49,20 @@ public class MovieList {
         return movieResults;
     }
 
+    public LinkedList<MovieItem>popularMovies(int page, boolean adult){
+        MovieResultsPage apiResults = movieManager.popularMovies(page, adult);
+        LinkedList<MovieItem> movieResults = new LinkedList<>();
+
+        apiResults.getResults().forEach(movieDb -> {
+            String posterPath = "https://image.tmdb.org/t/p/w300"+movieDb.getPosterPath();
+            String backDropPath = "https://image.tmdb.org/t/p/w1280"+movieDb.getBackdropPath();
+            MovieItem movieItem = new MovieItem(posterPath,backDropPath,movieDb.getOverview(),movieDb.getTitle(),movieDb);
+            movieResults.add(movieItem);
+        });
+
+        return movieResults;
+    }
+
 
     /* ---------------------------------------- S/Getters ----------------------------------------------------------- */
 

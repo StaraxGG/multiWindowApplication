@@ -40,6 +40,9 @@ public class MovieManager {
         return api.search(query, page,true);
     }
 
+    public MovieResultsPage popularMovies(int page, boolean adult) {
+        return api.popularMovies(page,adult);
+    }
 
     /* ---------------------------------------- S/Getters ----------------------------------------------------------- */
 

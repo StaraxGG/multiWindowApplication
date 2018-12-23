@@ -1,5 +1,7 @@
 package A;
 
+import B.MovieManager;
+import info.movito.themoviedbapi.model.core.MovieResultsPage;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -20,6 +22,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.net.URL;
+import java.util.LinkedList;
 import java.util.ResourceBundle;
 
 
@@ -41,13 +44,14 @@ public class Main extends Application implements Initializable {
         root.setOnMouseDragged(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                primaryStage.setX(mouseEvent.getScreenX() - xOffset );
+                primaryStage.setX(mouseEvent.getScreenX() - xOffset);
                 primaryStage.setY(mouseEvent.getSceneY() - yOffset);
             }
         });
         */
 
-        root.setStyle("-fx-background-color: transparent;");
+
+        //root.setStyle("-fx-background-color: transparent;");
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.setTitle("Hello World");
         Scene scene = new Scene(root);
@@ -58,8 +62,6 @@ public class Main extends Application implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-
 
     }
 
