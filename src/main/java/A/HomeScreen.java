@@ -3,21 +3,26 @@ package A;
 import A.screensFramework.ControlledScreen;
 import A.screensFramework.ScreensController;
 import A.screensFramework.ScreensFramework;
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXScrollPane;
+import com.jfoenix.controls.*;
+import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.TilePane;
+import javafx.scene.layout.VBox;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.LinkedList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * An implementation of HomeScreen
@@ -37,6 +42,14 @@ public class HomeScreen implements Initializable, ControlledScreen {
     ScrollPane scrollPane;
     @FXML
     JFXButton switchButton;
+    @FXML
+    private JFXDrawer drawer;
+    @FXML
+    private JFXHamburger hamburger;
+    @FXML
+    private JFXTextField searchField;
+    @FXML
+    private JFXButton searchButton;
 
     ScreensController topController;
 
@@ -67,6 +80,27 @@ public class HomeScreen implements Initializable, ControlledScreen {
         scrollPane.setContent(tilePane);
         scrollPane.setFitToWidth(true);
         scrollPane.setPrefHeight(Double.MAX_VALUE);
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/hamburgerMenu.fxml"));
+            VBox box = loader.load();
+            drawer.setSidePane(box);
+            drawer.close();
+        } catch (IOException ex) {
+            Logger.getLogger(HomeScreen.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        HamburgerBackArrowBasicTransition transition = new HamburgerBackArrowBasicTransition(hamburger);
+        transition.setRate(-1);
+        hamburger.addEventHandler(MouseEvent.MOUSE_PRESSED, (e) -> {
+            transition.setRate(transition.getRate() * -1);
+            transition.play();
+            if (drawer.isOpened()) {
+                drawer.close();
+            } else {
+                drawer.open();
+            }
+        });
     }
 
     @Override

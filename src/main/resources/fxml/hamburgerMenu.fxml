@@ -1,38 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="720.0" maxWidth="-Infinity" minHeight="720.0" minWidth="-Infinity" prefHeight="720.0" prefWidth="353.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="720.0" maxWidth="246.0" minHeight="720.0" minWidth="246.0" prefHeight="720.0" prefWidth="246.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="201.0" fitWidth="353.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="180.0" fitWidth="247.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../backdrop.jpg" />
          </image>
       </ImageView>
-      <JFXButton prefHeight="88.0" prefWidth="353.0" ripplerFill="#ff0909" style="-fx-background-color: #c62828;">
-         <font>
-            <Font name="Consolas" size="48.0" />
-         </font>
-      </JFXButton>
-      <JFXButton prefHeight="88.0" prefWidth="353.0" ripplerFill="#ff0909" style="-fx-background-color: #c62828;">
-         <font>
-            <Font name="Consolas" size="48.0" />
-         </font>
-      </JFXButton>
-      <JFXButton prefHeight="88.0" prefWidth="353.0" ripplerFill="#ff0909" style="-fx-background-color: #c62828;">
-         <font>
-            <Font name="Consolas" size="48.0" />
-         </font>
-      </JFXButton>
-      <JFXButton prefHeight="88.0" prefWidth="353.0" ripplerFill="#ff0909" style="-fx-background-color: #c62828;">
-         <font>
-            <Font name="Consolas" size="48.0" />
-         </font>
-      </JFXButton>
+      <StackPane prefHeight="48.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="57.0" prefWidth="246.0">
+               <children>
+                  <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons8-zwei-tickets-48.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton alignment="CENTER" contentDisplay="BOTTOM" minHeight="48.0" prefHeight="49.0" prefWidth="247.0" ripplerFill="#a1a1a1" text="Listen" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Leelawadee UI" size="24.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets right="55.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="48.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="57.0" prefWidth="246.0">
+               <children>
+                  <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons8-kreisdiagramm-48.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton alignment="CENTER" contentDisplay="BOTTOM" minHeight="48.0" prefHeight="49.0" prefWidth="247.0" ripplerFill="#a1a1a1" text="Stats" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Leelawadee UI" size="24.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets right="65.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="48.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="57.0" prefWidth="246.0">
+               <children>
+                  <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons8-einstellungen-48.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton alignment="CENTER" contentDisplay="BOTTOM" minHeight="48.0" prefHeight="49.0" prefWidth="247.0" ripplerFill="#a1a1a1" text="Settings" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Leelawadee UI" size="24.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets right="35.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <AnchorPane prefHeight="435.0" prefWidth="246.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="237.0" layoutX="5.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../logoWhite.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </VBox>
