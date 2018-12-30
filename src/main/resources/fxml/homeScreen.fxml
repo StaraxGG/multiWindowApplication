@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXDrawer?>
 <?import com.jfoenix.controls.JFXHamburger?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -18,8 +19,8 @@
                <children>
                   <JFXHamburger fx:id="hamburger" layoutX="14.0" layoutY="20.0" />
                   <ImageView fx:id="logo" fitHeight="60.0" fitWidth="400.0" layoutX="429.0" pickOnBounds="true" preserveRatio="true" />
-                  <JFXTextField fx:id="searchField" layoutX="1025.0" layoutY="18.0" prefHeight="25.0" prefWidth="167.0" />
-                  <JFXButton fx:id="searchButton" layoutX="1192.0" layoutY="18.0" text="Search" />
+                  <JFXTextField fx:id="searchField" focusColor="#081c24" layoutX="1025.0" layoutY="18.0" prefHeight="25.0" prefWidth="167.0" unFocusColor="#c62828" />
+                  <JFXButton fx:id="searchButton" layoutX="1192.0" layoutY="18.0" prefHeight="25.0" prefWidth="55.0" text="Search" />
                </children>
             </AnchorPane>
             <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="708.0" maxWidth="1441.0" minHeight="177.0" minWidth="353.0" prefHeight="660.0" prefWidth="1258.0" style="-fx-background-color: #212121;" />

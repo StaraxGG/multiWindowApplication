@@ -62,7 +62,7 @@ public class HomeScreen implements Initializable, ControlledScreen {
         MovieList movieList = new MovieList();
         LinkedList<MovieItem> movieItems = movieList.popularMovies(0,true);
 
-        TilePane tilePane = new TilePane();
+        tilePane = new TilePane();
         tilePane.setStyle("-fx-background-color:  #c62828;");
         scrollPane.setStyle("-fx-background-color:  #c62828;");
         for(int i=0; i<movieItems.size() ; i++){
@@ -101,6 +101,22 @@ public class HomeScreen implements Initializable, ControlledScreen {
                 drawer.open();
             }
         });
+
+        searchButton.setOnMouseClicked(mouseEvent -> {
+            String query = searchField.getText();
+            LinkedList<MovieItem> movieItems12 = movieList.search(query,0,true);
+            setScreenContent(movieItems12,0);
+        });
+
+        //TODO change colours of logo
+        //TODO refactor this class
+        //TODO SearchBox enter to search
+        logo.setOnMouseClicked(mouseEvent -> {
+            String query = searchField.getText();
+            LinkedList<MovieItem> movieItems1 = movieList.popularMovies(0,true);
+            setScreenContent(movieItems1,0);
+        });
+
     }
 
     @Override
@@ -110,17 +126,17 @@ public class HomeScreen implements Initializable, ControlledScreen {
 
     @Override
     public void setScreenContent(LinkedList<MovieItem> movieItems, int index) {
-        //null
-    }
+        tilePane.getChildren().clear();
+        for(int i = index; i< movieItems.size() ; i++){
+            tilePane.getChildren().add(movieItems.get(i));
 
-    @FXML
-    private void goToMovie(ActionEvent event){
-        MovieList movieList = new MovieList();
-        LinkedList<MovieItem> movieItem = movieList.search("harry potter", 0, true);
+            final int p = i;
+            tilePane.getChildren().get(i).setOnMouseClicked(e -> {
+                ControlledScreen controller = topController.getController(ScreensFramework.screen2ID);
+                controller.setScreenContent(movieItems,p);
 
-        ControlledScreen controller = topController.getController(ScreensFramework.screen2ID);
-        controller.setScreenContent(movieItem,0);
-
-        topController.setScreen(ScreensFramework.screen2ID);
+                topController.setScreen(ScreensFramework.screen2ID);
+            });
+        }
     }
 }
